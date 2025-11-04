@@ -26,5 +26,5 @@ function is3() {
   document.querySelector(".info-text h2").textContent =
     "Hvis du bliver kidnappet";
   document.querySelector(".info-text p").textContent =
-    "Hvis du bliver kidnappet ska du ringe til befrierne";
+    "Hvis du bliver kidnappet ska du ringe til befrierne så de kan redde dig";
 }
