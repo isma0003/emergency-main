@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,18 +11,19 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
+
   <body id="register">
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html">LOGO-TYPE</a>
         </div>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+          <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
           <li><a class="menuItem" href="register.html">Indberet</a></li>
         </ul>
         <button class="burger">
@@ -35,47 +36,154 @@
 
     <main>
       <h1>INDBERET</h1>
+
       <section id="form-section">
         <article id="form-info">
           <h2>Overskrift</h2>
           <p>Tekst</p>
+
+          <section>
+            <h2>Undersøgelse: Den kidnappende isbil</h2>
+
+            <form aria-label="isbil undersøgelse" id="icecream-form">
+              <div class="form-group">
+                <label for="fullname">Navn (valgfrit)</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  placeholder="F.eks. Sofie"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="age">Alder</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="F.eks. 15"
+                  min="5"
+                  max="120"
+                  required
+                />
+                <p class="error-message">Indtast din alder</p>
+              </div>
+
+              <div class="form-group">
+                <label for="heard">Hvordan hørte du om isbilen?</label>
+                <select id="heard" name="heard" required>
+                  <option value="">Vælg...</option>
+                  <option value="gaden">Jeg så den på gaden</option>
+                  <option value="venner">En ven fortalte mig om den</option>
+                  <option value="nyheder">På nettet eller i nyheder</option>
+                  <option value="andet">Andet</option>
+                </select>
+                <p class="error-message">Vælg en mulighed</p>
+              </div>
+
+              <div class="form-group">
+                <label for="feeling"
+                  >Hvordan fik isbilen dig til at føle?</label
+                >
+                <textarea
+                  id="feeling"
+                  name="feeling"
+                  placeholder="F.eks. 'Den var hyggelig... men lidt uhyggelig!'"
+                  required
+                ></textarea>
+                <p class="error-message">Skriv venligst et svar</p>
+              </div>
+
+              <div class="form-group radio-group">
+                <p>Hvordan beskriver du stemningen?</p>
+                <label
+                  ><input type="radio" name="tone" value="uhyggelig" required />
+                  Uhyggelig</label
+                >
+                <label
+                  ><input type="radio" name="tone" value="sjov" /> Sjov / sort
+                  humor</label
+                >
+                <label
+                  ><input type="radio" name="tone" value="mystisk" />
+                  Mystisk</label
+                >
+                <label
+                  ><input type="radio" name="tone" value="andet" /> Andet</label
+                >
+                <p class="error-message">Vælg én mulighed</p>
+              </div>
+              <div class="form-group">
+                <label for="realism">Hvor bange var du?</label>
+                <input
+                  type="range"
+                  id="realism"
+                  name="realism"
+                  min="0"
+                  max="5"
+                  value="2"
+                />
+                <span id="realismValue">2</span>/5
+              </div>
+
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" id="consent" name="consent" required />
+                  Jeg giver samtykke til, at mine svar bruges anonymt til at
+                  finde isbilen.
+                </label>
+                <p class="error-message">Du skal give samtykke</p>
+              </div>
+
+              <button type="submit">Send svar</button>
+            </form>
+          </section>
         </article>
-        <form id="webform"></form>
-      </section>
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-        </article>
+
+        <section id="form-summary">
+          <h2>Opsummering</h2>
+          <article class="output">
+            <p>Navn: <span id="out_name"></span></p>
+            <p>Alder: <span id="out_age"></span></p>
+            <p>Hørt via: <span id="out_heard"></span></p>
+            <p>Følelse: <span id="out_feeling"></span></p>
+            <p>Stemning: <span id="out_tone"></span></p>
+            <p>Bange-skala: <span id="out_realism"></span></p>
+            <p>Samtykke: <span id="out_consent"></span></p>
+          </article>
+        </section>
       </section>
     </main>
+
     <footer>
       <nav class="some">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
         </ul>
       </nav>
       <nav class="another">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
         </ul>
       </nav>
       <nav class="yetanother">
         <ul>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
         </ul>
       </nav>
     </footer>
+
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/forms.js"></script>
   </body>
 </html>
