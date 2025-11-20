@@ -133,7 +133,7 @@ section {
   gap: 0.5rlh;
 } */
 #icecream-form {
-  background-color: #fff6e5;
+  background-color: light-dark(#fffae2, #858585);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px #0002;
@@ -151,8 +151,8 @@ section {
 }
 
 #icecream-form button {
-  background-color: #ff6600;
-  color: white;
+  background-color: #950089;
+  color: light-dark (#fff, #3f3f3f);
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -167,7 +167,7 @@ section {
 
 #form-summary {
   margin-top: 2rem;
-  background: #fffdf2;
+  background: light-dark(#fffdf2, #222);
   border-radius: 8px;
   padding: 1rem;
 }
@@ -212,7 +212,9 @@ section {
   font-weight: 500;
   margin: 0;
 }
-
+.output {
+  color: var(--text-output-color);
+}
 .form-group.radio-group input[type="radio"] {
   margin: 0;
   transform: translateY(0); /* Sørger for lodret justering */
@@ -221,4 +223,8 @@ section {
 .form-group.radio-group p {
   flex-basis: 100%;
   margin-bottom: 0.2rem;
+}
+
+.form-summary {
+  color: var(--text-output-color);
 }
